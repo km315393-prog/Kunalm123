@@ -1,120 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MBBS Academic Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lethargic Boy | MBBS Portfolio</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background-color: #0b1c2d;
+    color: #e6f1ff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0f253a;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    background:
+        linear-gradient(rgba(0, 128, 128, 0.7), rgba(11, 28, 45, 0.85)),
+        url('https://images.unsplash.com/photo-1576091160550-2173dba999ef') center/cover no-repeat;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+/* Cards */
+.glass-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(0, 255, 200, 0.2);
+    transition: 0.3s;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+}
+
+/* Buttons */
+.btn-med {
+    background: transparent;
+    border: 2px solid #00c9a7;
+    color: #00c9a7;
+    border-radius: 30px;
+    padding: 8px 20px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-med:hover {
+    background: #00c9a7;
+    color: #0b1c2d;
+}
+
+/* Dark Section Alternate */
+.alt-section {
+    background-color: #0f253a;
+}
+
+footer {
+    background-color: #081520;
+    padding: 50px 0;
+    text-align: center;
+    color: #b8d8f8;
+}
+</style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+    <a class="navbar-brand fw-bold" href="#">Lethargic Boy</a>
+</div>
+</nav>
+
+<!-- HERO -->
 <section class="hero">
-  <h1>Kunal Maurya</h1>
-  <p>2nd Year MBBS Student | Academic Medical/ Notes & Resources</p>
+<div class="container">
+<div class="row align-items-center">
+
+    <div class="col-md-6 text-center">
+        <img src="https://via.placeholder.com/350x420"
+             class="img-fluid rounded-4 shadow-lg"
+             alt="MBBS Student">
+    </div>
+
+    <div class="col-md-6">
+        <h1 class="display-4 fw-bold">Hi, I'm Lethargic Boy</h1>
+        <p class="lead mt-3">
+            2nd Professional MBBS Student
+        </p>
+        <p>
+            Currently studying Pathology, Pharmacology, and Microbiology.
+            Focused on developing strong clinical reasoning and pharmacological understanding.
+        </p>
+    </div>
+
+</div>
+</div>
 </section>
 
-<!-- ACADEMIC PROFILE -->
-<section class="section">
-  <h2>Academic Profile</h2>
-
-  <div class="card">
-    <p><strong>Course:</strong> MBBS</p>
-    <p><strong>Year:</strong> 2nd Professional</p>
-    <p><strong>University:</strong> Atal Bihari Vajpayee Medical University</p>
-    <p><strong>Subjects:</strong></p>
-    <ul>
-      <li>Anatomy</li>
-      <li>Physiology</li>
-      <li>Biochemistry</li>
-      <li>Pharmacology</li>
-      <li>Pathology</li>
-      <li>Microbiology</li>
-    </ul>
-  </div>
+<!-- Academic Profile -->
+<section class="section-padding text-center">
+<div class="container">
+    <h2 class="mb-5">Academic Profile</h2>
+    <div class="glass-card">
+        <p><strong>Course:</strong> MBBS</p>
+        <p><strong>Year:</strong> 2nd Professional</p>
+        <p><strong>Subjects:</strong> Pathology, Pharmacology, Microbiology</p>
+        <p><strong>Interest:</strong> Clinical Medicine & Evidence-Based Practice</p>
+    </div>
+</div>
 </section>
 
-<!-- STUDY NOTES -->
-<section class="section">
-  <h2>Study Notes</h2>
+<!-- Notes -->
+<section class="section-padding alt-section text-center">
+<div class="container">
+    <h2 class="mb-5">📚 Study Notes</h2>
+    <div class="row">
 
-  <div class="grid">
+        <div class="col-md-4 mb-4">
+            <div class="glass-card">
+                <h5>Pathology Notes</h5>
+                <p>General & Systemic Pathology summaries</p>
+                <a href="#" class="btn-med">View Notes</a>
+            </div>
+        </div>
 
-    <div class="note-box">
-      <h3>Anatomy</h3>
-      <button>View Notes</button>
+        <div class="col-md-4 mb-4">
+            <div class="glass-card">
+                <h5>Pharmacology Notes</h5>
+                <p>Mechanisms, ADRs & Clinical Correlation</p>
+                <a href="#" class="btn-med">View Notes</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="glass-card">
+                <h5>Microbiology Notes</h5>
+                <p>Lab diagnosis & important organisms</p>
+                <a href="#" class="btn-med">View Notes</a>
+            </div>
+        </div>
+
     </div>
-
-    <div class="note-box">
-      <h3>Physiology</h3>
-      <button>View Notes</button>
-    </div>
-
-    <div class="note-box">
-      <h3>Biochemistry</h3>
-      <button>View Notes</button>
-    </div>
-
-    <div class="note-box">
-      <h3>Pathology</h3>
-      <button>View Notes</button>
-    </div>
-
-    <div class="note-box">
-      <h3>Pharmacology</h3>
-      <button>View Notes</button>
-    </div>
-
-    <div class="note-box">
-      <h3>Microbiology</h3>
-      <button>View Notes</button>
-    </div>
-
-  </div>
+</div>
 </section>
 
-<!-- EXAM PAPERS -->
-<section class="section">
-  <h2>Previous Examination Papers</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Internal Examination Papers</h3>
-      <button>Download</button>
+<!-- Internals -->
+<section class="section-padding text-center">
+<div class="container">
+    <h2 class="mb-5">📝 Internal Examination Papers</h2>
+    <div class="glass-card">
+        <p>• Pathology Internal 1 & 2</p>
+        <p>• Pharmacology Class Tests</p>
+        <p>• Microbiology Internals</p>
+        <a href="#" class="btn-med mt-3">Download Papers</a>
     </div>
-
-    <div class="card">
-      <h3>Professional Exam Papers</h3>
-      <button>Download</button>
-    </div>
-  </div>
+</div>
 </section>
 
-<!-- CONNECT -->
-<section class="section">
-  <h2>Connect With Me</h2>
-
-  <div class="social">
-    <a href="#">YouTube Channel</a>
-    <a href="#">Instagram</a>
-  </div>
+<!-- Professional Papers -->
+<section class="section-padding alt-section text-center">
+<div class="container">
+    <h2 class="mb-5">🎓 Professional Exam Papers</h2>
+    <div class="glass-card">
+        <p>• Previous 10 Years Pathology Papers</p>
+        <p>• Pharmacology University Papers</p>
+        <p>• Microbiology Question Bank</p>
+        <a href="#" class="btn-med mt-3">Access Papers</a>
+    </div>
+</div>
 </section>
 
-<!-- PROFESSIONAL STATEMENT -->
-<section class="section statement">
-  <h2>Professional Statement</h2>
-  <p>
-    Dedicated MBBS student committed to academic excellence and knowledge sharing.
-    This platform provides structured study resources, examination materials,
-    and medical learning support for fellow students.
-  </p>
+<!-- Social Media -->
+<section class="section-padding text-center">
+<div class="container">
+    <h2 class="mb-5">🌐 Connect With Me</h2>
+    <div class="row">
+
+        <div class="col-md-6 mb-4">
+            <div class="glass-card">
+                <h5>YouTube</h5>
+                <p>Medical concept explanations & revision sessions</p>
+                <a href="#" class="btn-med">Visit Channel</a>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="glass-card">
+                <h5>Instagram</h5>
+                <p>Daily study updates & medical content</p>
+                <a href="#" class="btn-med">Follow</a>
+            </div>
+        </div>
+
+    </div>
+</div>
 </section>
 
 <footer>
-  <p>© 2026 Kunal Maurya | Academic Portfolio</p>
+<div class="container">
+    <h5>Professional Statement</h5>
+    <p>
+        Dedicated to mastering clinical sciences with a strong foundation in pathology,
+        pharmacology, and microbiology. Striving to integrate evidence-based medicine
+        with compassionate patient care.
+    </p>
+</div>
 </footer>
 
-<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
