@@ -198,26 +198,96 @@ A professional and collaborative space designed to enhance learning, sharing, an
 </div>
 </section>
 
-<!-- Notes -->
-<section id="notes" class="section-padding alt-section text-center">
-<div class="container">
-<h2 class="mb-4">📚 Study Notes</h2>
+<!-- Study Notes Section -->
+<section id="notes" class="section-padding alt-section">
+  <div class="container">
 
-<input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search subject...">
+    <div class="text-center mb-5">
+      <h2>📚 Study Notes</h2>
+      <p class="text-muted">Organized subject-wise notes for structured and focused learning.</p>
+    </div>
 
-<div class="row mt-5" id="notesSection">
+    <div class="row g-4 justify-content-center">
 
-<div class="col-md-4 mb-4 note-card"><div class="glass-card"><h5>Anatomy</h5><a href="#" class="btn-med">View Notes</a></div></div>
-<div class="col-md-4 mb-4 note-card"><div class="glass-card"><h5>Physiology</h5><a href="#" class="btn-med">View Notes</a></div></div>
-<div class="col-md-4 mb-4 note-card"><div class="glass-card"><h5>Biochemistry</h5><a href="#" class="btn-med">View Notes</a></div></div>
-<div class="col-md-4 mb-4 note-card"><div class="glass-card"><h5>Pathology</h5><a href="#" class="btn-med">View Notes</a></div></div>
-<div class="col-md-4 mb-4 note-card"><div class="glass-card"><h5>Pharmacology</h5><a href="#" class="btn-med">View Notes</a></div></div>
-<div class="col-md-4 mb-4 note-card"><div class="glass-card"><h5>Microbiology</h5><a href="#" class="btn-med">View Notes</a></div></div>
+      <!-- Anatomy -->
+      <div class="col-md-4 col-sm-6">
+        <div class="glass-card note-box text-center p-4 h-100">
+          <h5 class="mb-3">Anatomy</h5>
+          <a href="#" class="btn btn-danger btn-custom">View Notes</a>
+        </div>
+      </div>
 
-</div>
-</div>
+      <!-- Physiology -->
+      <div class="col-md-4 col-sm-6">
+        <div class="glass-card note-box text-center p-4 h-100">
+          <h5 class="mb-3">Physiology</h5>
+          <a href="#" class="btn btn-danger btn-custom">View Notes</a>
+        </div>
+      </div>
+
+      <!-- Biochemistry -->
+      <div class="col-md-4 col-sm-6">
+        <div class="glass-card note-box text-center p-4 h-100">
+          <h5 class="mb-3">Biochemistry</h5>
+          <a href="#" class="btn btn-danger btn-custom">View Notes</a>
+        </div>
+      </div>
+
+      <!-- Pathology -->
+      <div class="col-md-4 col-sm-6">
+        <div class="glass-card note-box text-center p-4 h-100">
+          <h5 class="mb-3">Pathology</h5>
+          <a href="#" class="btn btn-danger btn-custom">View Notes</a>
+        </div>
+      </div>
+
+      <!-- Pharmacology -->
+      <div class="col-md-4 col-sm-6">
+        <div class="glass-card note-box text-center p-4 h-100">
+          <h5 class="mb-3">Pharmacology</h5>
+          <a href="#" class="btn btn-danger btn-custom">View Notes</a>
+        </div>
+      </div>
+
+      <!-- Microbiology -->
+      <div class="col-md-4 col-sm-6">
+        <div class="glass-card note-box text-center p-4 h-100">
+          <h5 class="mb-3">Microbiology</h5>
+          <a href="#" class="btn btn-danger btn-custom">View Notes</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
-    
+
+<!-- Add This CSS -->
+<style>
+/* Smooth Card Hover */
+.note-box {
+  transition: all 0.3s ease-in-out;
+  border-radius: 15px;
+}
+
+.note-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(255, 0, 0, 0.2);
+}
+
+/* Custom Button */
+.btn-custom {
+  padding: 8px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.btn-custom:hover {
+  background-color: #b30000;
+  transform: scale(1.05);
+}
+</style>
 <section id="practical" class="section-padding text-center">
 <div class="container">
 <h2 class="mb-5">🧪 Practical Record Notes</h2>
