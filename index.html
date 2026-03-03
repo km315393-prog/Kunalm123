@@ -72,19 +72,36 @@ body {
     box-shadow: 0 0 25px rgba(0, 255, 200, 0.4);
 }
 
-/* Buttons */
+/* Medical Glow Button */
 .btn-med {
-    background: transparent;
-    border: 2px solid #00c9a7;
-    color: #00c9a7;
+    background: linear-gradient(45deg, #0a6b61, #14b8a6);
+    border: none;
+    color: #ffffff;
+    padding: 10px 22px;
     border-radius: 30px;
-    padding: 8px 20px;
-    transition: 0.3s;
+    font-weight: 600;
     text-decoration: none;
+    display: inline-block;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(20, 184, 166, 0.4);
 }
 .btn-med:hover {
-    background: #00c9a7;
-    color: #0b1c2d;
+    background: linear-gradient(45deg, #14b8a6, #0a6b61);
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 15px rgba(20, 184, 166, 0.8),
+        0 0 30px rgba(20, 184, 166, 0.6),
+        0 0 45px rgba(20, 184, 166, 0.4);
+}
+
+/* Glass Card Hover */
+.note-box {
+  transition: all 0.3s ease-in-out;
+}
+.note-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 201, 167, 0.2);
 }
 
 .alt-section { background-color: #0f253a; }
@@ -94,15 +111,6 @@ footer {
     padding: 50px 0;
     text-align: center;
     color: #b8d8f8;
-}
-
-/* Search */
-#searchInput {
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    width: 60%;
-    max-width: 400px;
 }
 
 /* Back To Top */
@@ -118,35 +126,10 @@ footer {
     color: white;
     cursor: pointer;
 }
-    /* Medical Glow Button */
-.btn-med {
-    background: linear-gradient(45deg, #0a6b61, #14b8a6);
-    border: none;
-    color: #ffffff;
-    padding: 10px 22px;
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.4s ease;
-    box-shadow: 0 0 10px rgba(20, 184, 166, 0.4);
-}
-
-/* Glow Hover */
-.btn-med:hover {
-    background: linear-gradient(45deg, #14b8a6, #0a6b61);
-    color: #ffffff;
-    transform: translateY(-4px);
-    box-shadow:
-        0 0 15px rgba(20, 184, 166, 0.8),
-        0 0 30px rgba(20, 184, 166, 0.6),
-        0 0 45px rgba(20, 184, 166, 0.4);
-}
 </style>
 </head>
 
 <body>
-
 <div id="progressBar"></div>
 
 <!-- Navbar -->
@@ -159,27 +142,18 @@ footer {
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#academic"><button onclick="toggleDark()" style="" class="btn btn-sm btn-light">Toggle Mode</button>
-<button onclick="topFunction()" id="topBtn">↑</button>
-</a>
-            </li>        
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+        <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item me-2">
+                <button onclick="toggleDark()" class="btn btn-sm btn-light">Toggle Mode</button>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="About.html">About me</a>
+            <li class="nav-item me-2">
+                <button onclick="topFunction()" id="topBtn">↑</button>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Resources.html">Resources</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Social.html">Social</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="My Art Gallery.html">Gallery</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="About.html">About me</a></li>
+            <li class="nav-item"><a class="nav-link" href="Resources.html">Resources</a></li>
+            <li class="nav-item"><a class="nav-link" href="Social.html">Social</a></li>
+            <li class="nav-item"><a class="nav-link" href="My Art Gallery.html">Gallery</a></li>
         </ul>
     </div>
 </div>
@@ -202,7 +176,9 @@ It integrates essential study materials, examination papers, and relevant update
 The objective is to minimize time spent searching and maximize focused learning.
 By organizing resources efficiently, it supports clarity, productivity, and academic excellence.
 Whether seeking notes, guidance, or reference materials, students can rely on this platform for streamlined access.
-A professional and collaborative space designed to enhance learning, sharing, and collective growth.</div>
+A professional and collaborative space designed to enhance learning, sharing, and collective growth.
+</p>
+</div>
 
 </div>
 </div>
@@ -221,244 +197,118 @@ A professional and collaborative space designed to enhance learning, sharing, an
 </div>
 </div>
 </section>
+
 <!-- Study Notes Section -->
 <section id="notes" class="section-padding alt-section">
-  <div class="container">
+<div class="container">
+<div class="text-center mb-5">
+<h2>📚 Study Notes</h2>
+<p class="text-muted">Organized subject-wise notes for structured and focused learning.</p>
+</div>
 
-    <div class="text-center mb-5">
-      <h2>📚 Study Notes</h2>
-      <p class="text-muted">Organized subject-wise notes for structured and focused learning.</p>
+<div class="row g-4 justify-content-center">
+  <div class="col-md-4 col-sm-6">
+    <div class="glass-card note-box text-center p-4 h-100">
+      <h5>Anatomy</h5>
+      <a href="#" class="btn-med mt-3">View Notes</a>
     </div>
-
-    <div class="row g-4 justify-content-center">
-
-      <!-- Anatomy -->
-      <div class="col-md-4 col-sm-6">
-        <div class="glass-card note-box text-center p-4 h-100">
-          <h5 class="mb-3">Anatomy</h5>
-          <a href="#" class=" btn btn-med">View Notes</a>
-        </div>
-      </div>
-
-      <!-- Physiology -->
-      <div class="col-md-4 col-sm-6">
-        <div class="glass-card note-box text-center p-4 h-100">
-          <h5 class="mb-3">Physiology</h5>
-          <a href="#" class="btn btn-med">View Notes</a>
-        </div>
-      </div>
-
-      <!-- Biochemistry -->
-      <div class="col-md-4 col-sm-6">
-        <div class="glass-card note-box text-center p-4 h-100">
-          <h5 class="mb-3">Biochemistry</h5>
-          <a href="#" class="btn btn-med">View Notes</a>
-        </div>
-      </div>
-
-      <!-- Pathology -->
-      <div class="col-md-4 col-sm-6">
-        <div class="glass-card note-box text-center p-4 h-100">
-          <h5 class="mb-3">Pathology</h5>
-          <a href="#" class="btn btn-med">View Notes</a>
-        </div>
-      </div>
-
-      <!-- Pharmacology -->
-      <div class="col-md-4 col-sm-6">
-        <div class="glass-card note-box text-center p-4 h-100">
-          <h5 class="mb-3">Pharmacology</h5>
-          <a href="#" class="btn btn-med">View Notes</a>
-        </div>
-      </div>
-
-      <!-- Microbiology -->
-      <div class="col-md-4 col-sm-6">
-        <div class="glass-card note-box text-center p-4 h-100">
-          <h5 class="mb-3">Microbiology</h5>
-          <a href="#" class="btn btn-med">View Notes</a>
-        </div>
-      </div>
-
-    </div>
-
   </div>
+  <div class="col-md-4 col-sm-6">
+    <div class="glass-card note-box text-center p-4 h-100">
+      <h5>Physiology</h5>
+      <a href="#" class="btn-med mt-3">View Notes</a>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <div class="glass-card note-box text-center p-4 h-100">
+      <h5>Biochemistry</h5>
+      <a href="#" class="btn-med mt-3">View Notes</a>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <div class="glass-card note-box text-center p-4 h-100">
+      <h5>Pathology</h5>
+      <a href="#" class="btn-med mt-3">View Notes</a>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <div class="glass-card note-box text-center p-4 h-100">
+      <h5>Pharmacology</h5>
+      <a href="#" class="btn-med mt-3">View Notes</a>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <div class="glass-card note-box text-center p-4 h-100">
+      <h5>Microbiology</h5>
+      <a href="#" class="btn-med mt-3">View Notes</a>
+    </div>
+  </div>
+</div>
+</div>
 </section>
-    <style>
 
-/* ===== Custom Glow Button ===== */
-.btn-custom {
-  display: inline-block;
-  padding: 10px 28px;
-  border-radius: 40px;
-  border: 2px solid #00c9a7 !important;
-  background-color: transparent !important;
-  color: #00c9a7 !important;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 8px rgba(0,201,167,0.4);
-}
-
-.btn-custom:hover {
-  background-color: #00c9a7 !important;
-  color: #0b1c2d !important;
-  transform: scale(1.06);
-  box-shadow: 0 0 18px rgba(0,201,167,0.8);
-}
-
-
-/* ===== Glass Card Hover Effect ===== */
-.note-box {
-  transition: all 0.3s ease-in-out;
-}
-
-.note-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 201, 167, 0.2);
-}
-
-    </style>
-
-
-<!-- Practical Record Notes Section -->
+<!-- Practical Notes Section -->
 <section id="practical" class="section-padding text-center">
-  <div class="container">
-
-    <h2 class="mb-5">🧪 Practical Record Notes</h2>
-
-    <div class="row g-4 justify-content-center">
-
-      <!-- Pathology -->
-      <div class="col-md-4 col-sm-6">
-        <div class="glass-card note-box p-4 h-100">
-          <h5 class="mb-3">Pathology Practical</h5>
-          <a href="practical-records/pathology.pdf" 
-             target="_blank" 
-             class="btn btn- med mt-3">
-             View PDF
-          </a>
-        </div>
-      </div>
-
-      <!-- Pharmacology -->
-      <div class="col-md-4 col-sm-6">
-        <div class="glass-card note-box p-4 h-100">
-          <h5 class="mb-3">Pharmacology Practical</h5>
-          <a href="practical-records/pharmacology.pdf" 
-             target="_blank" 
-             class="btn btn-med mt-3">
-             View PDF
-          </a>
-        </div>
-      </div>
-
-      <!-- Microbiology -->
-      <div class="col-md-4 col-sm-6">
-        <div class="glass-card note-box p-4 h-100">
-          <h5 class="mb-3">Microbiology Practical</h5>
-          <a href="practical-records/microbiology.pdf" 
-             target="_blank" 
-             class="btn btn-med mt-3">
-             View PDF
-          </a>
-        </div>
-      </div>
-
+<div class="container">
+<h2 class="mb-5">🧪 Practical Record Notes</h2>
+<div class="row g-4 justify-content-center">
+  <div class="col-md-4 col-sm-6">
+    <div class="glass-card note-box p-4 h-100">
+      <h5>Pathology Practical</h5>
+      <a href="practical-records/pathology.pdf" class="btn-med mt-3" target="_blank">View PDF</a>
     </div>
-
   </div>
+  <div class="col-md-4 col-sm-6">
+    <div class="glass-card note-box p-4 h-100">
+      <h5>Pharmacology Practical</h5>
+      <a href="practical-records/pharmacology.pdf" class="btn-med mt-3" target="_blank">View PDF</a>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <div class="glass-card note-box p-4 h-100">
+      <h5>Microbiology Practical</h5>
+      <a href="practical-records/microbiology.pdf" class="btn-med mt-3" target="_blank">View PDF</a>
+    </div>
+  </div>
+</div>
+</div>
 </section>
-    <style>
-.btn-custom {
-  display: inline-block;
-  padding: 10px 28px;
-  border-radius: 40px;
-  border: 2px solid #00c9a7 !important;
-  background-color: transparent !important;
-  color: #00c9a7 !important;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 8px rgba(0,201,167,0.4);
-}
 
-.btn-custom:hover {
-  background-color: #00c9a7 !important;
-  color: #0b1c2d !important;
-  transform: scale(1.06);
-  box-shadow: 0 0 18px rgba(0,201,167,0.8);
-}
-    </style>
 <!-- Internals Section -->
-<section id="internals" style="padding:80px 0; text-align:center; background-color:#0b1c2d;">
-
-  <div style="max-width:600px; margin:auto; padding:30px; 
-              background:rgba(255,255,255,0.05); 
-              backdrop-filter:blur(10px);
-              border-radius:20px;
-              box-shadow:0 0 20px rgba(0,0,0,0.3);">
-
-    <h2 style="margin-bottom:30px; color:#ffffff;">
-      📝 Internal Examination Papers
-    </h2>
-
-    <p style="color:#d6e6f2; margin-bottom:25px;">
-      • Access a structured collection of previous internal assessment papers 
-      from our college to gain clear insight into examination patterns 
-      and frequently emphasized topics.
-    </p>
-
-    <!-- Glow Button -->
-    <a href="#" class="btn btn-med">
-      Access Papers
-    </a>
-
-  </div>
-
+<section id="internals" class="section-padding text-center">
+<div class="container">
+<h2 class="mb-5">📝 Internal Examination Papers</h2>
+<div class="glass-card note-box p-4 mx-auto" style="max-width:600px;">
+<p>• Access a structured collection of previous internal assessment papers from our college to gain clear insight into examination patterns and frequently emphasized topics.</p>
+<a href="#" class="btn-med mt-3">Access Papers</a>
+</div>
+</div>
 </section>
 
 <!-- Professional Papers Section -->
 <section id="professional" class="section-padding alt-section text-center">
-  <div class="container">
-
-    <h2 class="mb-5">🎓 Professional Exam Papers</h2>
-
-    <div class="glass-card note-box p-4 mx-auto" style="max-width: 650px;">
-
-      <p class="mb-3">
-        • Explore a curated collection of previous university professional examination papers 
-        designed to support focused and strategic preparation. Engage with high-yield questions 
-        to understand examination patterns, identify core topics, and refine your approach to answering.
-      </p>
-
-      <a href="#" class="btn btn-med mt-3">
-        Access Papers
-      </a>
-
-    </div>
-
-  </div>
-</section
+<div class="container">
+<h2 class="mb-5">🎓 Professional Exam Papers</h2>
+<div class="glass-card note-box p-4 mx-auto" style="max-width:650px;">
+<p>• Explore a curated collection of previous university professional examination papers designed to support focused and strategic preparation. Engage with high-yield questions to understand examination patterns, identify core topics, and refine your approach to answering.</p>
+<a href="#" class="btn-med mt-3">Access Papers</a>
+</div>
+</div>
+</section>
 
 <!-- Social Media -->
 <section class="section-padding text-center">
-  <div class="container">
-    <h2 class="mb-5">🌐 Connect With Me</h2>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-4 col-sm-6">
-        <div class="glass-card text-center">
-          <h5 class="mb-3">
-            <i class="bi bi-youtube" style="color: #FF0000; font-size: 1.5rem;"></i>
-            YouTube
-          </h5>
-          <a href="#" class="btn-med">Visit Channel</a>
-        </div>
-      </div>
+<div class="container">
+<h2 class="mb-5">🌐 Connect With Me</h2>
+<div class="row justify-content-center">
+  <div class="col-md-4 col-sm-6">
+    <div class="glass-card text-center">
+      <h5 class="mb-3"><i class="bi bi-youtube" style="color:#FF0000; font-size:1.5rem;"></i> YouTube</h5>
+      <a href="#" class="btn-med">Visit Channel</a>
     </div>
-
   </div>
+</div>
+</div>
 </section>
 
 <footer>
@@ -472,11 +322,8 @@ Striving to integrate evidence-based medicine with compassionate patient care.
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
-function toggleDark() {
-document.body.classList.toggle("dark-mode");
-}
+function toggleDark() { document.body.classList.toggle("dark-mode"); }
 
 window.onscroll = function() {
 let winScroll = document.documentElement.scrollTop;
@@ -484,27 +331,11 @@ let height = document.documentElement.scrollHeight - document.documentElement.cl
 let scrolled = (winScroll / height) * 100;
 document.getElementById("progressBar").style.width = scrolled + "%";
 
-if (winScroll > 300) {
-document.getElementById("topBtn").style.display = "block";
-} else {
-document.getElementById("topBtn").style.display = "none";
-}
+if(winScroll > 300){ document.getElementById("topBtn").style.display = "block"; }
+else{ document.getElementById("topBtn").style.display = "none"; }
 };
 
-function topFunction() {
-document.documentElement.scrollTop = 0;
-}
-
-function searchFunction() {
-let input = document.getElementById("searchInput").value.toLowerCase();
-let cards = document.getElementsByClassName("note-card");
-
-for (let i = 0; i < cards.length; i++) {
-let text = cards[i].innerText.toLowerCase();
-cards[i].style.display = text.includes(input) ? "" : "none";
-}
-}
+function topFunction() { document.documentElement.scrollTop = 0; }
 </script>
-
 </body>
 </html>
