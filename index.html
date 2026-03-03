@@ -295,37 +295,89 @@ A professional and collaborative space designed to enhance learning, sharing, an
   transform: scale(1.05);
 }
 </style>
-  
+<!-- Practical Record Notes Section -->
 <section id="practical" class="section-padding text-center">
-<div class="container">
-<h2 class="mb-5">🧪 Practical Record Notes</h2>
+  <div class="container">
 
-<div class="row">
+    <h2 class="mb-5">🧪 Practical Record Notes</h2>
 
-<div class="col-md-4 mb-4">
-<div class="glass-card">
-<h5>Pathology Practical</h5>
-<a href="practical-records/pathology.pdf" target="_blank" class="btn-med mt-3">View PDF</a>
-</div>
-</div>
+    <div class="row g-4 justify-content-center">
 
-<div class="col-md-4 mb-4">
-<div class="glass-card">
-<h5>Pharmacology Practical</h5>
-<a href="practical-records/pharmacology.pdf" target="_blank" class="btn-med mt-3">View PDF</a>
-</div>
-</div>
+      <!-- Pathology -->
+      <div class="col-md-4 col-sm-6">
+        <div class="glass-card note-box p-4 h-100">
+          <h5 class="mb-3">Pathology Practical</h5>
+          <a href="practical-records/pathology.pdf" 
+             target="_blank" 
+             class="btn btn-theme btn-custom mt-3">
+             View PDF
+          </a>
+        </div>
+      </div>
 
-<div class="col-md-4 mb-4">
-<div class="glass-card">
-<h5>Microbiology Practical</h5>
-<a href="practical-records/microbiology.pdf" target="_blank" class="btn-med mt-3">View PDF</a>
-</div>
-</div>
+      <!-- Pharmacology -->
+      <div class="col-md-4 col-sm-6">
+        <div class="glass-card note-box p-4 h-100">
+          <h5 class="mb-3">Pharmacology Practical</h5>
+          <a href="practical-records/pharmacology.pdf" 
+             target="_blank" 
+             class="btn btn-theme btn-custom mt-3">
+             View PDF
+          </a>
+        </div>
+      </div>
 
-</div>
-</div>
-    </section>
+      <!-- Microbiology -->
+      <div class="col-md-4 col-sm-6">
+        <div class="glass-card note-box p-4 h-100">
+          <h5 class="mb-3">Microbiology Practical</h5>
+          <a href="practical-records/microbiology.pdf" 
+             target="_blank" 
+             class="btn btn-theme btn-custom mt-3">
+             View PDF
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Button & Card Styling -->
+<style>
+/* Smooth Card Hover */
+.note-box {
+  transition: all 0.3s ease-in-out;
+  border-radius: 15px;
+}
+
+.note-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(5, 161, 101, 0.25); /* Matching green glow */
+}
+
+/* Theme Button */
+.btn-theme {
+  background-color: #05a165;
+  color: #ffffff;
+  border: none;
+}
+
+/* Button Shape & Animation */
+.btn-custom {
+  padding: 8px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover */
+.btn-theme:hover {
+  background-color: #048a57; /* Slightly deeper green */
+  color: #ffffff;
+  transform: scale(1.05);
+}
+</style>
 
 <!-- Internals -->
 <section id="internals" class="section-padding text-center">
